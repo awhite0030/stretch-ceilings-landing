@@ -1,0 +1,21 @@
+{
+  "name": "stretch-ceilings-landing",
+  "version": "1.0.0",
+  "description": "Portfolio landing page for a fictional stretch ceiling specialist.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [
+    "astro",
+    "landing-page",
+    "portfolio"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "astro": "^5.18.2"
+  }
+}

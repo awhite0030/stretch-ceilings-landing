@@ -1,0 +1,504 @@
+---
+import '../styles/global.css';
+
+const services = [
+  {
+    title: 'Матовые потолки',
+    text: 'Чистая белая поверхность без бликов. Подходит для гостиных, спален и рабочих зон.',
+    price: 'от 450 ₽/м²',
+  },
+  {
+    title: 'Сатиновые потолки',
+    text: 'Мягкий перламутровый эффект и аккуратный световой рисунок по периметру.',
+    price: 'от 500 ₽/м²',
+  },
+  {
+    title: 'Глянцевые потолки',
+    text: 'Визуально добавляют воздуха и работают в современных интерьерах с чистой геометрией.',
+    price: 'от 550 ₽/м²',
+  },
+  {
+    title: 'Многоуровневые',
+    text: 'Фигурные решения, ниши под свет и сложные сценарии для больших помещений.',
+    price: 'от 1 200 ₽/м²',
+  },
+];
+
+const projects = [
+  {
+    title: 'Гостиная с кухней',
+    text: 'Скрытая подсветка, ровный периметр, чистые стыки и спокойная светлая палитра.',
+    category: 'living',
+    image: '/assets/hero-living-room.png',
+  },
+  {
+    title: 'Кухня и столовая',
+    text: 'Аккуратный световой контур и практичное решение для повседневной эксплуатации.',
+    category: 'kitchen',
+    image: '/assets/kitchen.png',
+  },
+  {
+    title: 'Спальня',
+    text: 'Сатиновый потолок и мягкая вечерняя подсветка без визуального шума.',
+    category: 'bedroom',
+    image: '/assets/bedroom.png',
+  },
+  {
+    title: 'Ванная',
+    text: 'Чистая геометрия, влагостойкая отделка и яркий функциональный свет.',
+    category: 'bathroom',
+    image: '/assets/bathroom.png',
+  },
+  {
+    title: 'Прихожая',
+    text: 'Компактный световой сценарий и аккуратный периметр для узкого пространства.',
+    category: 'hallway',
+    image: '/assets/hallway.png',
+  },
+];
+
+const steps = [
+  {
+    num: '1',
+    title: 'Заявка',
+    text: 'Вы оставляете заявку на сайте или пишете в мессенджер. Отвечаем в течение 15 минут.',
+  },
+  {
+    num: '2',
+    title: 'Замер',
+    text: 'Выезжаем на объект, оцениваем помещение, световые сценарии и особенности монтажа.',
+  },
+  {
+    num: '3',
+    title: 'Расчёт',
+    text: 'Считаем смету по материалам, сложности и срокам. Без скрытых доплат и сюрпризов.',
+  },
+  {
+    num: '4',
+    title: 'Монтаж',
+    text: 'Аккуратная установка, вынос мусора и чистая сдача объекта после завершения работ.',
+  },
+  {
+    num: '5',
+    title: 'Гарантия',
+    text: 'Передаём акт и рекомендации по уходу. Гарантия на полотно и монтаж до 15 лет.',
+  },
+];
+
+const advantages = [
+  'Опыт более 10 лет',
+  'Чистый монтаж без пыли',
+  'Фиксированная смета',
+  'Гарантия до 15 лет',
+  'Бесплатный замер',
+];
+
+const reviews = [
+  {
+    name: 'Ирина, м. Московская',
+    text: 'Сделали потолок в гостиной и на кухне. Монтаж прошёл аккуратно, свет выставили ровно, результат получился очень спокойный и дорогой на вид.',
+    image: '/assets/hero-living-room.png',
+  },
+  {
+    name: 'Дмитрий, м. Девяткино',
+    text: 'Отрабатывали сложную геометрию в спальне. Сроки выдержали, мусор вынесли, по цене всё совпало с расчётом.',
+    image: '/assets/bedroom.png',
+  },
+  {
+    name: 'Мария, м. Приморская',
+    text: 'Ванная получилась очень чистая визуально, без лишнего блеска. Подсветку сделали мягкой, как мы и просили.',
+    image: '/assets/bathroom.png',
+  },
+  {
+    name: 'Сергей, м. Купчино',
+    text: 'Сделали прихожую и часть коридора с подсветкой. Всё по срокам, по смете и без лишних разговоров.',
+    image: '/assets/hallway.png',
+  },
+];
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Мастер Потолков — натяжные потолки в Санкт-Петербурге</title>
+    <meta
+      name="description"
+      content="Портфолио-лендинг для вымышленного мастера по натяжным потолкам: замер, монтаж, гарантия и готовые объекты в Санкт-Петербурге и области."
+    />
+    <meta name="theme-color" content="#f7f3ea" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Мастер Потолков">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="brand-text">
+            <strong>Мастер Потолков</strong>
+            <small>Алексей Морозов</small>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="#portfolio">Портфолио</a>
+          <a href="#process">Как работаем</a>
+          <a href="#benefits">Преимущества</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="header-cta">
+          <a class="header-phone" href="tel:+79215554567">
+            <span>+7 (921) 555-45-67</span>
+            <small>Ежедневно с 9:00 до 21:00</small>
+          </a>
+          <a class="button button-solid" href="#contacts">Получить расчёт</a>
+          <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" hidden>
+        <a href="#services">Услуги</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#process">Как работаем</a>
+        <a href="#benefits">Преимущества</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+        <a class="button button-solid" href="#contacts">Получить расчёт</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="hero-eyebrow">Санкт-Петербург и область</p>
+            <h1>Натяжные потолки любой сложности</h1>
+            <p class="hero-lead">
+              Качественный монтаж под ключ: замер, расчёт, установка и гарантия без лишней бюрократии.
+            </p>
+
+            <ul class="hero-benefits">
+              <li>Бесплатный замер и консультация</li>
+              <li>Чистый монтаж без пыли и грязи</li>
+              <li>Гарантия до 15 лет на полотно и работу</li>
+            </ul>
+
+            <div class="hero-actions">
+              <a class="button button-solid" href="#contacts">Получить расчёт стоимости</a>
+              <a class="button button-ghost" href="#portfolio">Смотреть портфолио</a>
+            </div>
+          </div>
+
+          <div class="hero-media" aria-hidden="true">
+            <img src="/assets/hero-living-room.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section section-divider">
+        <div class="container">
+          <div class="section-head">
+            <h2>Услуги и цены</h2>
+            <p>Прозрачные ориентиры по стоимости на типовые решения. Окончательная цена зависит от площади, высоты и светового сценария.</p>
+          </div>
+
+          <div class="service-grid">
+            {services.map((service) => (
+              <article class="service-card">
+                <div class="service-card__visual">
+                  <span></span>
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+                <div class="service-card__footer">
+                  <strong>{service.price}</strong>
+                  <a href="#contacts">Заказать</a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div class="section-action">
+            <a class="button button-outline" href="#contacts">Смотреть все услуги и цены</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section">
+        <div class="container">
+          <div class="section-head section-head--split">
+            <div>
+              <h2>Портфолио работ</h2>
+              <p>Реальные по виду интерьеры и аккуратные потолочные решения для разных типов помещений.</p>
+            </div>
+            <div class="portfolio-filters" role="tablist" aria-label="Фильтр портфолио">
+              <button class="filter is-active" type="button" data-filter="all">Все</button>
+              <button class="filter" type="button" data-filter="living">Гостиные</button>
+              <button class="filter" type="button" data-filter="kitchen">Кухни</button>
+              <button class="filter" type="button" data-filter="bedroom">Спальни</button>
+              <button class="filter" type="button" data-filter="bathroom">Ванные</button>
+              <button class="filter" type="button" data-filter="hallway">Прихожие</button>
+            </div>
+          </div>
+
+          <div class="portfolio-grid">
+            {projects.map((project) => (
+              <article class="portfolio-card" data-category={project.category}>
+                <img src={project.image} alt={project.title} loading="lazy" />
+                <div class="portfolio-card__body">
+                  <h3>{project.title}</h3>
+                  <p>{project.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div class="section-action">
+            <a class="button button-outline" href="#contacts">Смотреть все работы</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section section-divider">
+        <div class="container">
+          <div class="section-head">
+            <h2>Как мы работаем</h2>
+            <p>Пять понятных шагов от первого обращения до сдачи объекта.</p>
+          </div>
+
+          <div class="process-grid">
+            {steps.map((step) => (
+              <article class="process-step">
+                <span class="process-step__num">{step.num}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Почему выбирают меня</h2>
+            <p>Сильный результат здесь строится на аккуратности, понятной смете и нормальном сервисе.</p>
+          </div>
+
+          <div class="benefit-grid">
+            {advantages.map((item) => (
+              <article class="benefit-card">
+                <span class="benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2 3.5 6v5c0 5 3.2 9.6 8.5 11 5.3-1.4 8.5-6 8.5-11V6L12 2Z"></path>
+                    <path d="m8.5 12 2.2 2.2L15.5 9.4"></path>
+                  </svg>
+                </span>
+                <p>{item}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="section section-divider">
+        <div class="container">
+          <div class="section-head section-head--split">
+            <div>
+              <h2>Отзывы клиентов</h2>
+              <p>Короткие комментарии после завершённых объектов и сдачи работ.</p>
+            </div>
+            <div class="section-arrows" aria-hidden="true">
+              <button type="button" class="arrow">‹</button>
+              <button type="button" class="arrow">›</button>
+            </div>
+          </div>
+
+          <div class="review-grid">
+            {reviews.map((review) => (
+              <article class="review-card">
+                <div class="review-card__top">
+                  <h3>{review.name}</h3>
+                  <div class="stars" aria-label="5 из 5">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+                <p>{review.text}</p>
+                <img src={review.image} alt="" loading="lazy" />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section contact-section">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <div class="section-head section-head--tight">
+              <h2>Оставьте заявку</h2>
+              <p>Бесплатный замер и расчёт стоимости. Отвечу с понятной сметой и сроками.</p>
+            </div>
+
+            <ul class="contact-list">
+              <li>
+                <span>Телефон</span>
+                <a href="tel:+79215554567">+7 (921) 555-45-67</a>
+              </li>
+              <li>
+                <span>Email</span>
+                <a href="mailto:hello@master-potolkov.ru">hello@master-potolkov.ru</a>
+              </li>
+              <li>
+                <span>Адрес</span>
+                <p>Санкт-Петербург, Ленинский проспект, 123</p>
+              </li>
+              <li>
+                <span>Время работы</span>
+                <p>Ежедневно с 9:00 до 21:00</p>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form" novalidate>
+            <label>
+              <span>Ваше имя</span>
+              <input type="text" name="name" placeholder="Александр" required />
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 (999) 123-45-67" required />
+            </label>
+            <label>
+              <span>Тип помещения</span>
+              <select name="room" required>
+                <option value="">Выберите вариант</option>
+                <option>Гостиная</option>
+                <option>Кухня</option>
+                <option>Спальня</option>
+                <option>Ванная</option>
+                <option>Прихожая</option>
+                <option>Коммерческий объект</option>
+              </select>
+            </label>
+            <label>
+              <span>Комментарий</span>
+              <textarea name="message" rows="4" placeholder="Коротко опишите объект и пожелания"></textarea>
+            </label>
+
+            <button class="button button-solid form-submit" type="submit">Получить расчёт</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-visual" aria-hidden="true">
+            <img src="/assets/hallway.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+          <div>
+            <strong>Мастер Потолков</strong>
+            <small>Алексей Морозов</small>
+          </div>
+        </div>
+
+        <div class="footer-columns">
+          <div>
+            <h3>Навигация</h3>
+            <a href="#services">Услуги</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#process">Как работаем</a>
+            <a href="#benefits">Преимущества</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+          </div>
+          <div>
+            <h3>Контакты</h3>
+            <a href="tel:+79215554567">+7 (921) 555-45-67</a>
+            <a href="mailto:hello@master-potolkov.ru">hello@master-potolkov.ru</a>
+            <span>Санкт-Петербург, Ленинский проспект, 123</span>
+            <span>Ежедневно с 9:00 до 21:00</span>
+          </div>
+          <div>
+            <h3>Документы</h3>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Договор оферты</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector('.menu-button');
+      const mobileNav = document.querySelector('.mobile-nav');
+      const mobileLinks = mobileNav?.querySelectorAll('a');
+
+      menuButton?.addEventListener('click', () => {
+        const isOpen = mobileNav.hasAttribute('data-open');
+        if (isOpen) {
+          mobileNav.removeAttribute('data-open');
+          mobileNav.setAttribute('hidden', '');
+          menuButton.setAttribute('aria-expanded', 'false');
+        } else {
+          mobileNav.setAttribute('data-open', 'true');
+          mobileNav.removeAttribute('hidden');
+          menuButton.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      mobileLinks?.forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileNav.removeAttribute('data-open');
+          mobileNav.setAttribute('hidden', '');
+          menuButton.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      const filters = document.querySelectorAll('.filter');
+      const cards = document.querySelectorAll('.portfolio-card');
+
+      filters.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+
+          filters.forEach((item) => item.classList.remove('is-active'));
+          button.classList.add('is-active');
+
+          cards.forEach((card) => {
+            const matches = filter === 'all' || card.dataset.category === filter;
+            card.classList.toggle('is-hidden', !matches);
+          });
+        });
+      });
+
+      const form = document.querySelector('.contact-form');
+      const status = document.querySelector('.form-status');
+      const submit = document.querySelector('.form-submit');
+
+      form?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        status.textContent = 'Заявка отправлена. Свяжусь с вами в течение 15 минут.';
+        submit.textContent = 'Заявка отправлена';
+        submit.disabled = true;
+      });
+    </script>
+  </body>
+</html>
