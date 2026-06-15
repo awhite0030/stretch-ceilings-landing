@@ -2,6 +2,11 @@
 
 Портфолио-лендинг для вымышленного мастера по натяжным потолкам. Проект собран как отдельный Astro-сайт в собственной папке и подходит для демонстрации фронтенд-работы в портфолио.
 
+## Demo
+
+- GitHub: https://github.com/awhite0030/stretch-ceilings-landing
+- Vercel: https://stretch-ceilings-landing.vercel.app
+
 ## Стек
 
 - Astro
@@ -23,8 +28,8 @@ npm run build
 
 ## Публикация
 
-- GitHub: `stretch-ceilings-landing`
-- Demo: pending deployment on Vercel
+- GitHub: `awhite0030/stretch-ceilings-landing`
+- Demo: `https://stretch-ceilings-landing.vercel.app`
 
 ## Контакты на макете
 
